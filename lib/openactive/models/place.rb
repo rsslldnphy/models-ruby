@@ -82,6 +82,11 @@ module OpenActive
       define_property :formatted_description, as: "beta:formattedDescription", types: [
         "string",
       ]
+
+      # @return [Array<OpenActive::Models::Concept>]
+      define_property :place_type, as: "beta:placeType", types: [
+        "OpenActive::Models::Concept[]",
+      ]
     end
   end
 end
