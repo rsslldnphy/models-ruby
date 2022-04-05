@@ -25,16 +25,16 @@ module OpenActive
 
       def values
         data = {}
-        self.class.properties.each do |key, field:|
-          data[key] = send(field)
+        self.class.properties.each do |key, property|
+          data[key] = send(property[:field])
         end
         data
       end
 
       def to_h
         data = {}
-        self.class.properties.each do |_key, field:|
-          data[field] = send(field)
+        self.class.properties.each do |_key, property|
+          data[field] = send(property[:field])
         end
         data
       end
